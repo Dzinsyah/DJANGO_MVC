@@ -1,0 +1,53 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid padtop50">
+    <div class="row">
+        <a class="btn btn-primary marginx" href="{% url 'input_blog' %}">BUAT POST BARU</a>
+    </div>
+</div>
+<div class="container-fluid padtop50">
+    <div class="row">
+        <img src="{% static 'images/kendala-sepulsa.jpg' %}" class="marginx" alt=""><br>
+    </div>
+    <div class="row padding300 padding20">
+        <h1>Punya kendala? Segera Hubungi Customer Service Sepulsa!</h1>
+        <p>Bagi sepulsa, kepuasan pelanggan adalah yang utama. Kami senantiasa mendengarkan keluhan maupun
+            kendala yang
+            kamu hadapi selama melakukan transaksi di Sepulsa. Umumnya pelanggan Sepulsa menghadapi kendala
+            sebagai
+            berikut: Status order Pending Jika transaksi pembayaran sudah selesai, namun status order kamu
+            masih
+            pending dalam jangka waktu 15 menit, segera hubungi tim customer service dengan menyertakan email</p><br>
+        <a href=""><span>Baca selengkapnya...</span></a>
+    </div>
+</div>
+<div class="container-fluid padtop50">
+    <div class="row">
+        <img src="{% static 'images/sms.png' %}" class="marginx sizeimgblog" alt=""><br>
+    </div>
+    <div class="row padding300 padding20">
+        <h1>OTP, Si Kode Rahasia nan Berbahaya</h1>
+        <p>kemudahan dalam berbagai transaksi perbankan memang banyak memberikan keuntungan bagi nasabah.
+            Bayangkan
+            saja, aktivitas jual beli yang pada awalnya membutuhkan waktu dan tempat, kini bisa dilakukan tanpa
+            perlu
+            beranjak dari tempat duduk kamu dan pembayaran lunas dalam hitungan detik dengan transaksi online.
+            Namun
+            tanpa disadari, kemudahan tersebut bukan berarti tanpa celah. Sebelum kita membahas lebih... </p><br>
+        <a href=""><span>Baca selengkapnya...</span></a>
+    </div>
+</div>
+{% for isi in isiblog %}
+<div class="container-fluid padtop50">
+    <div class="row">
+        <img src="{{isi.images}}" class="marginx sizeimgblog" alt=""><br>
+    </div>
+    <div class="row padding300 padding20">
+        <h1>{{isi.title}}</h1><br>
+        <p>{{isi.content}} </p><br>
+        <a href=""><span>Baca selengkapnya...</span></a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

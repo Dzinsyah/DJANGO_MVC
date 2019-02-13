@@ -1,0 +1,79 @@
+{% load static %}
+
+<head>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/home.css' %}" rel="stylesheet">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+
+<body>
+    <div class="container-fluid ">
+        <div class="row justify-content-between">
+            <div class="col4">
+                <h2 class="margin10">Alpha Tech Academy</h2>
+            </div>
+            <div class='col-5'>
+                <nav class="navbar navbar-expand-sm bg-light kanan">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item ">
+                            <a class="nav-link black" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link black" href="{% url 'blog' %}">Blog</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link black" href="{% url 'mentor' %}">Mentor</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link black" href="{% url 'mentee' %}">Mentee</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link black" href="{% url 'author' %}">Author</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid blue padding50">
+        <div class="row">
+            <img src="{% static 'images/alpha-logo.png' %}" class="marginx" alt=""><br>
+        </div>
+        <div class="row">
+            <h1 class="marginx white">Alpha Tech Academy</h1><br>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <p class="marginx white">Alpha Tech Academy is a tech telent incubator that gives everyone(even
+                    non IT
+                    background) a chance to be
+                    a proffessional Tech Talent within 3 month. Contact person: Email : academy@alphatech.id
+                    Mobile
+                    phone:
+                    0877 9609 9530
+                </p>
+            </div>
+            <div class="col-3"></div>
+        </div><br><br>
+    </div>
+{% block content %}
+{% endblock %}
+    
+    <!-- footer -->
+    <div class="container-fluid blue margintop40 height75">
+        <div class="row ">
+            <span class="marginx font17 padding20">Our product :
+                <img src="{% static 'images/logo-grey-alphapay.png' %}" alt="">
+                <img src="{% static 'images/logo-grey-sepulsa.png' %}" alt="">
+                <img src="{% static 'images/logo-grey-alphabill.png' %}" alt="">
+            </span>
+        </div>
+    </div>
+    <div class="container-fluid blackground">
+        <div class="row ">
+            <span class="marginx white">Contact Person: Mobile phone: 0877 9609 9530. Email : <span class=" blu">academy@alphatech.id</span></span>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,59 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row ">
+        <h2 class="marginx margintop40 bold">Our Mentor</h2>
+    </div>
+</div>
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-4">
+            <img src="{% static 'images/people-andreas.png' %}" class="sizeimgmentor margina" alt=""><br>
+        </div>
+        <div class="col-8">
+            <h4 class="marginh3 grey bold">Andreas Nugroho</h4>
+            <span class="bold marginp">Software Ninja (5 Years Experience)</span>
+            <p class="marginp">"Great place to learn about programming. Come join us!"</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-4">
+            <img src="{% static 'images/people-ramdhan.png' %}" class="sizeimgmentor marginmen" alt=""><br>
+        </div>
+        <div class="col-8">
+            <h4 class="marginh3men grey bold">Ramdhan Hidayat</h4>
+            <span class="bold marginpmen">Master of Chaos (10 Years Experience)</span>
+            <p class="marginpmen">"We make this program with passion, hard work and heart. Let's get rock with us!"</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-4">
+            <img src="{% static 'images/people-trimo.png' %}" class="sizeimgmentor marginmen" alt=""><br>
+        </div>
+        <div class="col-8">
+            <h4 class="marginh3men grey bold">Trimo Leksono</h4>
+            <span class="bold marginpmen">Magician (8 Years Experience)</span>
+            <p class="marginpmen">"The best place for who want to be great IT talent"</p>
+        </div>
+    </div>
+</div>
+{% for m in mentor %}
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-4">
+            <img src="{{m.images}}" class="sizeimgmentor marginmen" alt=""><br>
+        </div>
+        <div class="col-8">
+            <h4 class="marginh3men grey bold">{{m.nama_mentor}}</h4>
+            <span class="bold marginpmen">{{m.position}}</span>
+            <p class="marginpmen">{{m.description}}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
